@@ -1,0 +1,69 @@
+Mario Ferrón Cano
+
+Utilizando la máquina virtual Ubuntu Server, y a través de un terminal conectándote con el 
+usuario ubuntu, ejecutar los comandos para contestar los siguientes ejercicios. Escribir la 
+solución debajo de cada pregunta. (Cada pregunta será 1 punto) 
+
+1. Muestra los archivos ocultos del directorio /etc junto con sus permisos y propietarios.
+ 
+ls -la /etc
+
+2. Desde el directorio /tmp, lista el contenido del directorio /var/log mostrando el 
+resultado en formato largo. 
+
+ls -l ../var/log
+
+3. Muestra los archivos del directorio /var ordenados por fecha de última modificación 
+(del más reciente al más antiguo). 
+
+ls -lt var
+
+4. Visualiza las primeras 15 líneas del archivo /etc/passwd.
+
+(Desde el directorio /home/ubuntu)  
+head -n 15 ../../etc/passwd
+
+5. Crea un directorio llamado practica en tu directorio personal y dentro de él un archivo 
+vacío llamado notas.txt. 
+
+mkdir practica
+cd practica
+touch notas.txt
+
+6. Edita el archivo notas.txt y escribe el nombre de tres comandos de Linux que conozcas. 
+Guarda y cierra el editor. 
+
+nano notas.txt
+
+	Estos son tres ejemplos de comandos de Linux:
+	ls -l
+	touch
+	pwd
+
+Control + X (Exit) 
+Quieres guardar antes de salir? Y/N: Y
+
+
+7. Copia el archivo notas.txt en el directorio /tmp y renómbralo a backup.txt. 
+
+(Desde el directorio /home/ubuntu)  
+cp practica/notas.txt ../../tmp/backup.txt
+
+
+8. Cambia los permisos del archivo notas.txt para que solo el propietario pueda leerlo y 
+escribirlo, mientras que el grupo y otros no tengan ningún permiso. 
+
+(Desde /home/ubuntu/practica)
+chmod 600 notas.txt
+
+9. Crea un grupo de usuarios con el nombre equipoLinux. 
+
+sudo groupadd equipoLinux
+
+10. Añade un nuevo usuario llamado alumno que pertenezca al grupo equipoLinux y 
+establece la contraseña de acceso como linux2025.
+
+sudo adduser --ingroup equipoLinux alumno
+New password: linux2025
+Retype password: linux2025
+Is the information correct? Y/n : Y
